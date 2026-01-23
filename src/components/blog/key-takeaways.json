@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_key_takeaways",
+  "info": {
+    "displayName": "keyTakeaways"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "sections": {
+      "type": "component",
+      "component": "blog.key-takeaways-merge",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

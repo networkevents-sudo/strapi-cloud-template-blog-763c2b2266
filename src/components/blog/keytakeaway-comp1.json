@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_keytakeaway_comp1s",
+  "info": {
+    "displayName": "keytakeaway_comp1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

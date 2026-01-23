@@ -12,6 +12,11 @@
       "type": "component",
       "component": "blog.para-comp",
       "repeatable": true
+    },
+    "items": {
+      "type": "component",
+      "component": "blog.skillitem-comp",
+      "repeatable": true
     }
   },
   "config": {}

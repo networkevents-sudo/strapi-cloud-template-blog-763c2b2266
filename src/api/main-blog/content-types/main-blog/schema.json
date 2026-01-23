@@ -35,6 +35,11 @@
       "type": "component",
       "component": "blog.source",
       "repeatable": false
+    },
+    "keyTakeaways": {
+      "type": "component",
+      "component": "blog.key-takeaways",
+      "repeatable": false
     }
   }
 }

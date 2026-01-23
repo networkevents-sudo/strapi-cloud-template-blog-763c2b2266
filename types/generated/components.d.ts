@@ -14,6 +14,48 @@ export interface BlogBlogBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogKeyTakeaways extends Struct.ComponentSchema {
+  collectionName: 'components_blog_key_takeaways';
+  info: {
+    displayName: 'keyTakeaways';
+  };
+  attributes: {
+    sections: Schema.Attribute.Component<'blog.key-takeaways-merge', false>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogKeyTakeawaysMerge extends Struct.ComponentSchema {
+  collectionName: 'components_blog_key_takeaways_merges';
+  info: {
+    displayName: 'KeyTakeaways_merge';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'blog.keytakeaway-comp2', true>;
+    title: Schema.Attribute.Component<'blog.keytakeaway-comp1', false>;
+  };
+}
+
+export interface BlogKeytakeawayComp1 extends Struct.ComponentSchema {
+  collectionName: 'components_blog_keytakeaway_comp1s';
+  info: {
+    displayName: 'keytakeaway_comp1';
+  };
+  attributes: {
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogKeytakeawayComp2 extends Struct.ComponentSchema {
+  collectionName: 'components_blog_keytakeaway_comp2s';
+  info: {
+    displayName: 'Keytakeaway_comp2';
+  };
+  attributes: {
+    items: Schema.Attribute.String;
+  };
+}
+
 export interface BlogParaComp extends Struct.ComponentSchema {
   collectionName: 'components_blog_para_comps';
   info: {
@@ -77,6 +119,7 @@ export interface BlogSource extends Struct.ComponentSchema {
     displayName: 'source';
   };
   attributes: {
+    items: Schema.Attribute.Component<'blog.skillitem-comp', true>;
     section: Schema.Attribute.Component<'blog.para-comp', true>;
     title: Schema.Attribute.Text;
   };
@@ -146,6 +189,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blog.blog-banner': BlogBlogBanner;
+      'blog.key-takeaways': BlogKeyTakeaways;
+      'blog.key-takeaways-merge': BlogKeyTakeawaysMerge;
+      'blog.keytakeaway-comp1': BlogKeytakeawayComp1;
+      'blog.keytakeaway-comp2': BlogKeytakeawayComp2;
       'blog.para-comp': BlogParaComp;
       'blog.sec1': BlogSec1;
       'blog.sec2': BlogSec2;

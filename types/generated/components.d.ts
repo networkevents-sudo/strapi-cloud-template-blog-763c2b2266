@@ -144,9 +144,13 @@ export interface BlogSec2 extends Struct.ComponentSchema {
   };
   attributes: {
     para: Schema.Attribute.Text;
+    para2: Schema.Attribute.Text;
     skillsItems: Schema.Attribute.Component<'blog.skillitem-comp', true>;
     subpara: Schema.Attribute.Text;
+    subpara2: Schema.Attribute.Text;
+    subpara3: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
+    title1: Schema.Attribute.Text;
   };
 }
 

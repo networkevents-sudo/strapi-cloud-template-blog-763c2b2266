@@ -18,6 +18,18 @@
       "type": "component",
       "component": "blog.skillitem-comp",
       "repeatable": true
+    },
+    "subpara2": {
+      "type": "text"
+    },
+    "title1": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "text"
+    },
+    "subpara3": {
+      "type": "text"
     }
   },
   "config": {}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_sec3s",
+  "info": {
+    "displayName": "sec3"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "result": {
+      "type": "component",
+      "component": "blog.skillitem-comp",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

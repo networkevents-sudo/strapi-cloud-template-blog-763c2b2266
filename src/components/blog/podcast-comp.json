@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blog_podcast_comps",
+  "info": {
+    "displayName": "podcast_comp"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ctaText": {
+      "type": "text"
+    },
+    "linkLabel": {
+      "type": "text"
+    },
+    "linkUrl": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

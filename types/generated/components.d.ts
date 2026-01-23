@@ -14,6 +14,28 @@ export interface BlogBlogBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogFaq extends Struct.ComponentSchema {
+  collectionName: 'components_blog_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    sections: Schema.Attribute.Component<'blog.faq-comp', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogFaqComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_faq_comps';
+  info: {
+    displayName: 'faq_Comp';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
 export interface BlogKeyTakeaways extends Struct.ComponentSchema {
   collectionName: 'components_blog_key_takeaways';
   info: {
@@ -64,6 +86,31 @@ export interface BlogParaComp extends Struct.ComponentSchema {
   attributes: {
     para: Schema.Attribute.Text;
     source: Schema.Attribute.String;
+  };
+}
+
+export interface BlogPodcast extends Struct.ComponentSchema {
+  collectionName: 'components_blog_podcasts';
+  info: {
+    displayName: 'podcast';
+  };
+  attributes: {
+    sections: Schema.Attribute.Component<'blog.podcast-comp', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogPodcastComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_podcast_comps';
+  info: {
+    displayName: 'podcast_comp';
+  };
+  attributes: {
+    ctaText: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    linkLabel: Schema.Attribute.Text;
+    linkUrl: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -189,11 +236,15 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blog.blog-banner': BlogBlogBanner;
+      'blog.faq': BlogFaq;
+      'blog.faq-comp': BlogFaqComp;
       'blog.key-takeaways': BlogKeyTakeaways;
       'blog.key-takeaways-merge': BlogKeyTakeawaysMerge;
       'blog.keytakeaway-comp1': BlogKeytakeawayComp1;
       'blog.keytakeaway-comp2': BlogKeytakeawayComp2;
       'blog.para-comp': BlogParaComp;
+      'blog.podcast': BlogPodcast;
+      'blog.podcast-comp': BlogPodcastComp;
       'blog.sec1': BlogSec1;
       'blog.sec2': BlogSec2;
       'blog.sec3': BlogSec3;

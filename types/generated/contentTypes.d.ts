@@ -624,6 +624,7 @@ export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'blog.faq', false>;
     keyTakeaways: Schema.Attribute.Component<'blog.key-takeaways', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -631,6 +632,7 @@ export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
       'api::main-blog.main-blog'
     > &
       Schema.Attribute.Private;
+    podcast: Schema.Attribute.Component<'blog.podcast', false>;
     publishedAt: Schema.Attribute.DateTime;
     sec1: Schema.Attribute.Component<'blog.sec1', true>;
     sec2: Schema.Attribute.Component<'blog.sec2', false>;

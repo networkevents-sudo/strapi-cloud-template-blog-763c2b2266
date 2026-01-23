@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_podcasts",
+  "info": {
+    "displayName": "podcast"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "sections": {
+      "type": "component",
+      "component": "blog.podcast-comp",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

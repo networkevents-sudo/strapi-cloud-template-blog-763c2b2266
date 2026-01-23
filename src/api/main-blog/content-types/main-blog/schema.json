@@ -40,6 +40,16 @@
       "type": "component",
       "component": "blog.key-takeaways",
       "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "blog.faq",
+      "repeatable": false
+    },
+    "podcast": {
+      "type": "component",
+      "component": "blog.podcast",
+      "repeatable": false
     }
   }
 }

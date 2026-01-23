@@ -633,6 +633,8 @@ export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sec1: Schema.Attribute.Component<'blog.sec1', true>;
     sec2: Schema.Attribute.Component<'blog.sec2', false>;
+    sec3: Schema.Attribute.Component<'blog.sec3', false>;
+    source: Schema.Attribute.Component<'blog.source', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

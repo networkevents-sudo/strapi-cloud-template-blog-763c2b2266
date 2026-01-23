@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_sources",
+  "info": {
+    "displayName": "source"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "component": "blog.para-comp",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -14,6 +14,17 @@ export interface BlogBlogBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogParaComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_para_comps';
+  info: {
+    displayName: 'para_Comp';
+  };
+  attributes: {
+    para: Schema.Attribute.Text;
+    source: Schema.Attribute.String;
+  };
+}
+
 export interface BlogSec1 extends Struct.ComponentSchema {
   collectionName: 'components_blog_sec1s';
   info: {
@@ -39,6 +50,17 @@ export interface BlogSec2 extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogSec3 extends Struct.ComponentSchema {
+  collectionName: 'components_blog_sec3s';
+  info: {
+    displayName: 'sec3';
+  };
+  attributes: {
+    result: Schema.Attribute.Component<'blog.skillitem-comp', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface BlogSkillitemComp extends Struct.ComponentSchema {
   collectionName: 'components_blog_skillitem_comps';
   info: {
@@ -46,6 +68,17 @@ export interface BlogSkillitemComp extends Struct.ComponentSchema {
   };
   attributes: {
     item: Schema.Attribute.String;
+  };
+}
+
+export interface BlogSource extends Struct.ComponentSchema {
+  collectionName: 'components_blog_sources';
+  info: {
+    displayName: 'source';
+  };
+  attributes: {
+    section: Schema.Attribute.Component<'blog.para-comp', true>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -113,9 +146,12 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blog.blog-banner': BlogBlogBanner;
+      'blog.para-comp': BlogParaComp;
       'blog.sec1': BlogSec1;
       'blog.sec2': BlogSec2;
+      'blog.sec3': BlogSec3;
       'blog.skillitem-comp': BlogSkillitemComp;
+      'blog.source': BlogSource;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

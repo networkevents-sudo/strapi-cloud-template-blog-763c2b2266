@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_para_comps",
+  "info": {
+    "displayName": "para_Comp"
+  },
+  "options": {},
+  "attributes": {
+    "para": {
+      "type": "text"
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

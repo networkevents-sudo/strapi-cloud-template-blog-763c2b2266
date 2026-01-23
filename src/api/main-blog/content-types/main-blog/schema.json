@@ -25,6 +25,16 @@
       "type": "component",
       "component": "blog.sec2",
       "repeatable": false
+    },
+    "sec3": {
+      "type": "component",
+      "component": "blog.sec3",
+      "repeatable": false
+    },
+    "source": {
+      "type": "component",
+      "component": "blog.source",
+      "repeatable": false
     }
   }
 }

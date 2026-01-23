@@ -55,6 +55,11 @@
       "type": "component",
       "component": "blog.author",
       "repeatable": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

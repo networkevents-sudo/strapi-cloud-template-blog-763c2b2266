@@ -622,6 +622,10 @@ export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.Component<'blog.author', false>;
     blog_banner: Schema.Attribute.Component<'blog.blog-banner', false>;
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

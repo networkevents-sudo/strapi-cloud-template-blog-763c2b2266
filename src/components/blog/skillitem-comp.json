@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_skillitem_comps",
+  "info": {
+    "displayName": "skillitem_comp"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

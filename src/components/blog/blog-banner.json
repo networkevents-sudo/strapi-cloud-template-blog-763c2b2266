@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blog_blog_banners",
+  "info": {
+    "displayName": "blog_banner"
+  },
+  "options": {},
+  "attributes": {
+    "blog_banner": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "videoUrl": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

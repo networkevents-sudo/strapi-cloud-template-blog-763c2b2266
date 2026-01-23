@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "main_blogs",
+  "info": {
+    "singularName": "main-blog",
+    "pluralName": "main-blogs",
+    "displayName": "Main Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blog_banner": {
+      "type": "component",
+      "component": "blog.blog-banner",
+      "repeatable": false
+    },
+    "sec1": {
+      "type": "component",
+      "component": "blog.sec1",
+      "repeatable": true
+    },
+    "sec2": {
+      "type": "component",
+      "component": "blog.sec2",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_sec1s",
+  "info": {
+    "displayName": "sec1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "para": {
+      "type": "text"
+    },
+    "subPara": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

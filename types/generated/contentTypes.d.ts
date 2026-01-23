@@ -609,6 +609,36 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
+  collectionName: 'main_blogs';
+  info: {
+    displayName: 'Main Blog';
+    pluralName: 'main-blogs';
+    singularName: 'main-blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blog_banner: Schema.Attribute.Component<'blog.blog-banner', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::main-blog.main-blog'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sec1: Schema.Attribute.Component<'blog.sec1', true>;
+    sec2: Schema.Attribute.Component<'blog.sec2', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1125,6 +1155,7 @@ declare module '@strapi/strapi' {
       'api::card.card': ApiCardCard;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::main-blog.main-blog': ApiMainBlogMainBlog;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

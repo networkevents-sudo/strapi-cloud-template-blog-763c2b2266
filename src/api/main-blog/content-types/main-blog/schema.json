@@ -50,6 +50,11 @@
       "type": "component",
       "component": "blog.podcast",
       "repeatable": false
+    },
+    "author": {
+      "type": "component",
+      "component": "blog.author",
+      "repeatable": false
     }
   }
 }

@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlogAuthor extends Struct.ComponentSchema {
+  collectionName: 'components_blog_authors';
+  info: {
+    displayName: 'author';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface BlogBlogBanner extends Struct.ComponentSchema {
   collectionName: 'components_blog_blog_banners';
   info: {
@@ -235,6 +246,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blog.author': BlogAuthor;
       'blog.blog-banner': BlogBlogBanner;
       'blog.faq': BlogFaq;
       'blog.faq-comp': BlogFaqComp;

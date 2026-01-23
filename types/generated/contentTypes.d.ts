@@ -620,6 +620,7 @@ export interface ApiMainBlogMainBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    author: Schema.Attribute.Component<'blog.author', false>;
     blog_banner: Schema.Attribute.Component<'blog.blog-banner', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

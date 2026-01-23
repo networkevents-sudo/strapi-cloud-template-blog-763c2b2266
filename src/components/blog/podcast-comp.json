@@ -8,17 +8,17 @@
     "title": {
       "type": "text"
     },
-    "description": {
+    "subtitle": {
       "type": "text"
     },
-    "ctaText": {
+    "subtitle2": {
       "type": "text"
     },
     "linkLabel": {
       "type": "text"
     },
-    "linkUrl": {
-      "type": "text"
+    "link": {
+      "type": "blocks"
     }
   },
   "config": {}

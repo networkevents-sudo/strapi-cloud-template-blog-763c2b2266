@@ -14,11 +14,11 @@
     "videoUrl": {
       "type": "text"
     },
-    "description": {
-      "type": "text"
-    },
     "date": {
       "type": "date"
+    },
+    "test": {
+      "type": "blocks"
     }
   },
   "config": {}

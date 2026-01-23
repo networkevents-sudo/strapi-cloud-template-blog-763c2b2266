@@ -9,10 +9,10 @@
       "type": "text"
     },
     "para": {
-      "type": "text"
+      "type": "blocks"
     },
-    "subPara": {
-      "type": "text"
+    "subpara": {
+      "type": "blocks"
     }
   },
   "config": {}

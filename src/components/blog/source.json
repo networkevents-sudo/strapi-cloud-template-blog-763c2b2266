@@ -13,6 +13,9 @@
       "component": "blog.para-comp",
       "repeatable": true
     },
+    "para": {
+      "type": "text"
+    },
     "items": {
       "type": "component",
       "component": "blog.skillitem-comp",

@@ -19,8 +19,8 @@ export interface BlogBlogBanner extends Struct.ComponentSchema {
   attributes: {
     blog_banner: Schema.Attribute.Text;
     date: Schema.Attribute.Date;
-    description: Schema.Attribute.Text;
     subtitle: Schema.Attribute.Text;
+    test: Schema.Attribute.Blocks;
     videoUrl: Schema.Attribute.Text;
   };
 }
@@ -53,7 +53,7 @@ export interface BlogKeyTakeaways extends Struct.ComponentSchema {
     displayName: 'keyTakeaways';
   };
   attributes: {
-    sections: Schema.Attribute.Component<'blog.key-takeaways-merge', false>;
+    sections: Schema.Attribute.Component<'blog.key-takeaways-merge', true>;
     title: Schema.Attribute.Text;
   };
 }
@@ -117,10 +117,10 @@ export interface BlogPodcastComp extends Struct.ComponentSchema {
     displayName: 'podcast_comp';
   };
   attributes: {
-    ctaText: Schema.Attribute.Text;
-    description: Schema.Attribute.Text;
+    link: Schema.Attribute.Blocks;
     linkLabel: Schema.Attribute.Text;
-    linkUrl: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text;
+    subtitle2: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
   };
 }
@@ -131,8 +131,8 @@ export interface BlogSec1 extends Struct.ComponentSchema {
     displayName: 'sec1';
   };
   attributes: {
-    para: Schema.Attribute.Text;
-    subPara: Schema.Attribute.Text;
+    para: Schema.Attribute.Blocks;
+    subpara: Schema.Attribute.Blocks;
     title: Schema.Attribute.Text;
   };
 }
@@ -146,9 +146,9 @@ export interface BlogSec2 extends Struct.ComponentSchema {
     para: Schema.Attribute.Text;
     para2: Schema.Attribute.Text;
     skillsItems: Schema.Attribute.Component<'blog.skillitem-comp', true>;
-    subpara: Schema.Attribute.Text;
+    subpara: Schema.Attribute.Blocks;
     subpara2: Schema.Attribute.Text;
-    subpara3: Schema.Attribute.Text;
+    subpara3: Schema.Attribute.Blocks;
     title: Schema.Attribute.Text;
     title1: Schema.Attribute.Text;
   };
@@ -161,6 +161,7 @@ export interface BlogSec3 extends Struct.ComponentSchema {
   };
   attributes: {
     result: Schema.Attribute.Component<'blog.skillitem-comp', true>;
+    subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
   };
 }
@@ -182,6 +183,7 @@ export interface BlogSource extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<'blog.skillitem-comp', true>;
+    para: Schema.Attribute.Text;
     section: Schema.Attribute.Component<'blog.para-comp', true>;
     title: Schema.Attribute.Text;
   };

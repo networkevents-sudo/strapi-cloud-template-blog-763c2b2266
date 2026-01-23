@@ -38,6 +38,11 @@
     },
     "card_date": {
       "type": "date"
+    },
+    "main_blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::main-blog.main-blog"
     }
   }
 }

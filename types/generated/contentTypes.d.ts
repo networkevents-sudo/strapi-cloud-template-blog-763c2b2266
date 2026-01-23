@@ -538,6 +538,10 @@ export interface ApiCardCard extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::card.card'> &
       Schema.Attribute.Private;
+    main_blog: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::main-blog.main-blog'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     sub_title: Schema.Attribute.Text;
     title: Schema.Attribute.Text;

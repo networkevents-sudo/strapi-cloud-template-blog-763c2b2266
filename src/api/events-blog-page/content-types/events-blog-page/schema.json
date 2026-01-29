@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "events_blog_pages",
   "info": {
     "singularName": "events-blog-page",

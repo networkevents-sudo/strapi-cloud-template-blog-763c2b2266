@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "events_blog_pages",
   "info": {
     "singularName": "events-blog-page",
     "pluralName": "events-blog-pages",
-    "displayName": "events_blog_page"
+    "displayName": "Event Blog"
   },
   "options": {
     "draftAndPublish": true

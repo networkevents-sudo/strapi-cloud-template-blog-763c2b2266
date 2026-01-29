@@ -582,10 +582,10 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiEventsBlogPageEventsBlogPage
-  extends Struct.CollectionTypeSchema {
+  extends Struct.SingleTypeSchema {
   collectionName: 'events_blog_pages';
   info: {
-    displayName: 'events_blog_page';
+    displayName: 'Event Blog';
     pluralName: 'events-blog-pages';
     singularName: 'events-blog-page';
   };

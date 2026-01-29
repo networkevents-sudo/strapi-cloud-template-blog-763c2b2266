@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_event_blog_events_components",
+  "info": {
+    "displayName": "blog_event_banner"
+  },
+  "options": {},
+  "attributes": {
+    "banner_title": {
+      "type": "text"
+    },
+    "banner_text": {
+      "type": "component",
+      "component": "blog-event.banner-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

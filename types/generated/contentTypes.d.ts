@@ -581,6 +581,46 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEventsBlogPageEventsBlogPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'events_blog_pages';
+  info: {
+    displayName: 'events_blog_page';
+    pluralName: 'events-blog-pages';
+    singularName: 'events-blog-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Component<
+      'blog-event.blog-events-component',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    events_details: Schema.Attribute.Component<
+      'blog-event.blog-events-details-main',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::events-blog-page.events-blog-page'
+    > &
+      Schema.Attribute.Private;
+    para_section: Schema.Attribute.Component<
+      'blog-event.blog-event-para',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1168,6 +1208,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::card.card': ApiCardCard;
       'api::category.category': ApiCategoryCategory;
+      'api::events-blog-page.events-blog-page': ApiEventsBlogPageEventsBlogPage;
       'api::global.global': ApiGlobalGlobal;
       'api::main-blog.main-blog': ApiMainBlogMainBlog;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_event_blog_event_para_comps",
+  "info": {
+    "displayName": "blog_event_para_comp"
+  },
+  "options": {},
+  "attributes": {
+    "para2": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

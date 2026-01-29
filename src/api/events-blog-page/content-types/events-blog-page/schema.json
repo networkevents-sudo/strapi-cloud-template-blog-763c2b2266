@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events_blog_pages",
+  "info": {
+    "singularName": "events-blog-page",
+    "pluralName": "events-blog-pages",
+    "displayName": "events_blog_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "blog-event.blog-events-component",
+      "repeatable": true
+    },
+    "para_section": {
+      "type": "component",
+      "component": "blog-event.blog-event-para",
+      "repeatable": true
+    },
+    "events_details": {
+      "type": "component",
+      "component": "blog-event.blog-events-details-main",
+      "repeatable": true
+    }
+  }
+}

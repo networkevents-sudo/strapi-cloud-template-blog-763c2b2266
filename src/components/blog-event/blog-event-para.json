@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_event_blog_event_paras",
+  "info": {
+    "displayName": "blog_event_para"
+  },
+  "options": {},
+  "attributes": {
+    "para1": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "component",
+      "component": "blog-event.blog-event-para-comp",
+      "repeatable": true
+    },
+    "subpara": {
+      "type": "component",
+      "component": "blog-event.blog-events-subpara",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

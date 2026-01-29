@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_event_blog_events_faq_comps",
+  "info": {
+    "displayName": "blog_events_faq_comp"
+  },
+  "options": {},
+  "attributes": {
+    "faq_question": {
+      "type": "text"
+    },
+    "faq_ans": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

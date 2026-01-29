@@ -1,5 +1,117 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlogEventBannerText extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_banner_texts';
+  info: {
+    displayName: 'banner_text';
+  };
+  attributes: {};
+}
+
+export interface BlogEventBlogEventPara extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_event_paras';
+  info: {
+    displayName: 'blog_event_para';
+  };
+  attributes: {
+    para1: Schema.Attribute.Text;
+    para2: Schema.Attribute.Component<'blog-event.blog-event-para-comp', true>;
+    subpara: Schema.Attribute.Component<'blog-event.blog-events-subpara', true>;
+  };
+}
+
+export interface BlogEventBlogEventParaComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_event_para_comps';
+  info: {
+    displayName: 'blog_event_para_comp';
+  };
+  attributes: {
+    para2: Schema.Attribute.RichText;
+  };
+}
+
+export interface BlogEventBlogEventsComponent extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_events_components';
+  info: {
+    displayName: 'blog_event_banner';
+  };
+  attributes: {
+    banner_text: Schema.Attribute.Component<'blog-event.banner-text', true>;
+    banner_title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogEventBlogEventsDetailsMain extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_events_details_mains';
+  info: {
+    displayName: 'blog_events_details_main';
+  };
+  attributes: {
+    blog_event: Schema.Attribute.Component<'blog-event.events-comp', true>;
+  };
+}
+
+export interface BlogEventBlogEventsFaq extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_events_faqs';
+  info: {
+    displayName: 'blog_events_faq';
+  };
+  attributes: {
+    faq: Schema.Attribute.Component<'blog-event.blog-events-faq-comp', true>;
+  };
+}
+
+export interface BlogEventBlogEventsFaqComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_events_faq_comps';
+  info: {
+    displayName: 'blog_events_faq_comp';
+  };
+  attributes: {
+    faq_ans: Schema.Attribute.Text;
+    faq_question: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogEventBlogEventsSubpara extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_blog_events_subparas';
+  info: {
+    displayName: 'blog_events_subpara';
+  };
+  attributes: {
+    subpara: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogEventEventsComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_events_comps';
+  info: {
+    displayName: 'events_comp';
+  };
+  attributes: {
+    events_detail: Schema.Attribute.Component<
+      'blog-event.events-detail-comp',
+      true
+    >;
+    events_title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogEventEventsDetailComp extends Struct.ComponentSchema {
+  collectionName: 'components_blog_event_events_detail_comps';
+  info: {
+    displayName: 'events_detail_comp';
+  };
+  attributes: {
+    blog_event_detail_btn: Schema.Attribute.String;
+    blog_event_detail_date: Schema.Attribute.Text;
+    blog_event_detail_ticke_title: Schema.Attribute.Text;
+    blog_event_detail_ticket_time: Schema.Attribute.Text;
+    blog_event_detail_title: Schema.Attribute.Text;
+    blog_event_detail_title2: Schema.Attribute.Text;
+    blog_event_details_month: Schema.Attribute.Text;
+  };
+}
+
 export interface BlogAuthor extends Struct.ComponentSchema {
   collectionName: 'components_blog_authors';
   info: {
@@ -252,6 +364,16 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blog-event.banner-text': BlogEventBannerText;
+      'blog-event.blog-event-para': BlogEventBlogEventPara;
+      'blog-event.blog-event-para-comp': BlogEventBlogEventParaComp;
+      'blog-event.blog-events-component': BlogEventBlogEventsComponent;
+      'blog-event.blog-events-details-main': BlogEventBlogEventsDetailsMain;
+      'blog-event.blog-events-faq': BlogEventBlogEventsFaq;
+      'blog-event.blog-events-faq-comp': BlogEventBlogEventsFaqComp;
+      'blog-event.blog-events-subpara': BlogEventBlogEventsSubpara;
+      'blog-event.events-comp': BlogEventEventsComp;
+      'blog-event.events-detail-comp': BlogEventEventsDetailComp;
       'blog.author': BlogAuthor;
       'blog.blog-banner': BlogBlogBanner;
       'blog.faq': BlogFaq;

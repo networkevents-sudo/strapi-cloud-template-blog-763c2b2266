@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_event_blog_events_subparas",
+  "info": {
+    "displayName": "blog_events_subpara"
+  },
+  "options": {},
+  "attributes": {
+    "subpara": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

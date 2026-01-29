@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blog_event_events_detail_comps",
+  "info": {
+    "displayName": "events_detail_comp"
+  },
+  "options": {},
+  "attributes": {
+    "blog_event_details_month": {
+      "type": "text"
+    },
+    "blog_event_detail_date": {
+      "type": "text"
+    },
+    "blog_event_detail_title": {
+      "type": "text"
+    },
+    "blog_event_detail_title2": {
+      "type": "text"
+    },
+    "blog_event_detail_btn": {
+      "type": "string"
+    },
+    "blog_event_detail_ticke_title": {
+      "type": "text"
+    },
+    "blog_event_detail_ticket_time": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

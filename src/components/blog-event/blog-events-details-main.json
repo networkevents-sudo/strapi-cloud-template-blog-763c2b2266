@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_event_blog_events_details_mains",
+  "info": {
+    "displayName": "blog_events_details_main"
+  },
+  "options": {},
+  "attributes": {
+    "blog_event": {
+      "type": "component",
+      "component": "blog-event.events-comp",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

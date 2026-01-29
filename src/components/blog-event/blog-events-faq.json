@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_event_blog_events_faqs",
+  "info": {
+    "displayName": "blog_events_faq"
+  },
+  "options": {},
+  "attributes": {
+    "faq": {
+      "type": "component",
+      "component": "blog-event.blog-events-faq-comp",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

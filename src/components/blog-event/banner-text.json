@@ -4,6 +4,10 @@
     "displayName": "banner_text"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "banner_text": {
+      "type": "text"
+    }
+  },
   "config": {}
 }

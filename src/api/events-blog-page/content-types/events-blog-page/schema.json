@@ -25,6 +25,11 @@
       "type": "component",
       "component": "blog-event.blog-events-details-main",
       "repeatable": true
+    },
+    "meta_seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": true
     }
   }
 }

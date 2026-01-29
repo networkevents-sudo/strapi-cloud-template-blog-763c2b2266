@@ -5,7 +5,9 @@ export interface BlogEventBannerText extends Struct.ComponentSchema {
   info: {
     displayName: 'banner_text';
   };
-  attributes: {};
+  attributes: {
+    banner_text: Schema.Attribute.Text;
+  };
 }
 
 export interface BlogEventBlogEventPara extends Struct.ComponentSchema {
@@ -301,6 +303,18 @@ export interface BlogSource extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    meta_desc: Schema.Attribute.Text;
+    meta_keywords: Schema.Attribute.Text;
+    meta_title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -390,6 +404,7 @@ declare module '@strapi/strapi' {
       'blog.sec3': BlogSec3;
       'blog.skillitem-comp': BlogSkillitemComp;
       'blog.source': BlogSource;
+      'seo.seo': SeoSeo;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -610,6 +610,7 @@ export interface ApiEventsBlogPageEventsBlogPage
       'api::events-blog-page.events-blog-page'
     > &
       Schema.Attribute.Private;
+    meta_seo: Schema.Attribute.Component<'seo.seo', true>;
     para_section: Schema.Attribute.Component<
       'blog-event.blog-event-para',
       true
